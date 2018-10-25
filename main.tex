@@ -1,0 +1,109 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}% delete the demo option in your actual code
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{mathabx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{bigstrut}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{makecell}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage[para]{footmisc}
+\usepackage[nottoc]{tocbibind}
+\usepackage{hyperref}
+\geometry{lmargin=.5cm,bmargin=0.5cm,rmargin=1.5cm}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+\begin{document}
+
+\section{Position variating Sources}\label{possection:FinalTestSourceSubINV:1min}
+
+\begin{longtable}{c|c|c|c|c} 
+\toprule 
+Database & Ra (deg) & Dec (deg)& Fk5 & Id/Link \\\midrule 
+\endfirsthead 
+\toprule 
+Database & Ra (deg) & Dec (deg) & Fk5 &Id/Link  \\\midrule 
+\endhead 
+\bottomrule 
+\endfoot 
+\bottomrule
+\caption{ Comparison position of candidates with TGSS and VLSSR for the 1min timescale data} 
+\endlastfoot
+\label{FinalTestSourceSubINV:1min:tablepos}
+
+tgss \& vlssr & -174.085 & 46.190 & 12 23 40 +46 11 23 &  \href{http://banana.transientskp.org/r4/vlo_FinalTestSourceSubINV/runningcatalog/316}{316} \\
+tgss \& vlssr & -173.394 & 46.893 & 12 26 25 +46 53 33 &  \href{http://banana.transientskp.org/r4/vlo_FinalTestSourceSubINV/runningcatalog/318}{318} \\
+\end{longtable}
+
+\subsection{Images}
+\begin{longtable}{m{1cm}|m{6cm}|m{6cm}|m{6cm}} 
+\toprule 
+Id & Data & TGSS (deg)& VLSSR  \\\midrule 
+\endfirsthead 
+\toprule 
+Id & Data & TGSS (deg)& VLSSR   \\\midrule 
+\endhead 
+\bottomrule 
+\endfoot 
+\bottomrule
+\caption{Images to compare the  position of our candidates with TGSS and VLSSR for the 1min timescale data} 
+\endlastfoot
+\label{FinalTestSourceSubINV:1min:tablepos_images}
+\href{http://banana.transientskp.org/r4/vlo_FinalTestSourceSubINV/runningcatalog/316}{316} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/316cutout_own.png}} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/316cutout_tgss.png}} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/316cutout_vlssr.png}} \\
+\href{http://banana.transientskp.org/r4/vlo_FinalTestSourceSubINV/runningcatalog/318}{318} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/318cutout_own.png}} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/318cutout_tgss.png}} & \raisebox{-\totalheight}{\includegraphics[width=6cm, height=6cm]{FinalTestSourceSubINV_1min/318cutout_vlssr.png}} \\
+\end{longtable}
+
+\begin{landscape}
+
+\section{Fluxvariating Sources}\label{varsection:FinalTestSourceSubINV:1min}
+
+\begin{longtable}{c|c|c|c|c|c|c|c|c|c|c|c} 
+\toprule 
+Flux147.5MHz (Jy) & Tgss (Jy) & Flux74MHz (Jy)& Vlssr (Jy) & fk5 & Ra (deg) & Dec (deg) &tggsRa&tgssDec&vlssrRa&vlssrDec& Id/Link \\\midrule 
+\endfirsthead 
+\toprule 
+Flux147.5MHz (Jy) & Tgss (Jy) & Flux74MHz (Jy)& Vlssr (Jy)& fk5 & Ra (deg) & Dec (deg)  &tggsRa&tgssDec&vlssrRa&vlssrDec& Id/Link \\\midrule 
+\endhead 
+\bottomrule 
+\endfoot 
+\bottomrule
+\caption{ Comparison of fluxes that vary from catalogues TGSS and VLSSR for 1min images} 
+\endlastfoot
+\label{FinalTestSourceSubINV:1min:tablevar}
+\end{longtable}
+
+\end{landscape}
+
+\subsection{Fits}
+\section{Effect on Candidate List}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c| c | c|}
+    \toprule
+     Step & Candidate list before & Candidate list after\\
+    \midrule
+        Initial Selector & 2 & 2 \\
+        PosVarCandi & 2 & 2 \\
+        FluxVarCandi & 2 & 0  \\
+        \midrule
+    \end{tabular}
+    \caption{Effect of our script on the size of the candidate list for the 1min timescale images}
+    \label{FinalTestSourceSubINV:1min:overviewcandidates}
+\end{table}
+
+\end{document}
